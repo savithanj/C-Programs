@@ -2,7 +2,7 @@
 # include <stdio.h>
 int main()
 {
-  printf("\"Hello! Today is ‘Monday’. Thank You.\"");  
-             // Use \" to print a " (a double quote)
+  printf("\"Hello! Today is ‘Monday’. Thank You.\"");// Use \" to print a " (a double quote)
+  
   return 0;
 }
