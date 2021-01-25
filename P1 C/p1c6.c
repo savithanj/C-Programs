@@ -16,6 +16,5 @@ int main()
   printf("f = %f\n",f); 
 
   //printf("c = %c\ni = %d \nf = %f\n",c,i,f);
-
   return 0;
 }
