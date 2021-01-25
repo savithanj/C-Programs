@@ -5,5 +5,6 @@
 int main()
 {
 	printf("\"Please type \"YES\" or \"NO\":\"");
+	
 	return 0;
 }
