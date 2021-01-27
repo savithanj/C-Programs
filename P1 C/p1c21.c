@@ -15,7 +15,7 @@ int main()
 	days = days % 365;   // remaining days
 
 	months = days / 30;  // number of months
-	days = days % 30;    // remaininf days
+	days = days % 30;    // remaining days
 
 	weeks = days / 7;    // number of weeks
 	days = days % 7;     // remaining days
