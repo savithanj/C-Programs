@@ -1,3 +1,4 @@
+// Program to accept the number of rows and the character to be printed in square pattern
 #include <stdio.h>
 
 int main()
@@ -20,4 +21,5 @@ int main()
 		}
 		printf("\n");
 	}
+	return 0;
 }
