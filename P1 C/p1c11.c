@@ -9,7 +9,7 @@ int main()
 	scanf("%d", &yob);
 
 	age = 2021 - yob;
-	printf("%d",age);
+	printf("Age = %d\n",age);
 
 	return 0;
 }

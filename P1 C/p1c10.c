@@ -2,7 +2,7 @@
 #include<stdio.h>
 int main()
 {
-	printf("sizeof char = %ld",sizeof(char));
+	printf("sizeof char = %ld\n",sizeof(char));
   	printf("sizeof short int  = %ld\n",sizeof(short int));
   	printf("sizeof unsigned short int = %ld\n",sizeof(unsigned short int));
   	printf("sizeof int = %ld\n",sizeof(int));
