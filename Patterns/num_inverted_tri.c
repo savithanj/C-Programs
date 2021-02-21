@@ -1,3 +1,5 @@
+// Programs to print numbers in inverted right triangle pattern
+
 #include<stdio.h>
 int main()
 {

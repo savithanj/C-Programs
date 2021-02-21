@@ -1,7 +1,13 @@
+// Program to print * in diamond shape in 9 lines
 #include<stdio.h>
 int main()
 {
 	int space;
+	char ch;
+
+	printf("Enter the character to be printed : ");
+	scanf("%c",&ch);
+
 	space = 5;
 	for(int i=1;i<=5;i++)
 	{
@@ -11,7 +17,7 @@ int main()
 		}
 		for(int j=1;j<=i;j++)
 		{
-			printf("%c ",'*');
+			printf("%c ",ch);
 		}
 		printf("\n");
 		space--;
@@ -27,7 +33,7 @@ int main()
 		}
 		for(int j=i;j<=4;j++)
 		{
-			printf("%c ",'*');
+			printf("%c ",ch);
 		}
 		printf("\n");
 		space++;
