@@ -3,7 +3,6 @@
 // Arithmetic operators -> +, -, *, /, and %
 
 #include<stdio.h>
-
 int main()
 {
   int num1=0, num2=0, result=0;
