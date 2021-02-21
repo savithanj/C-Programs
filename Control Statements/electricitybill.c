@@ -1,4 +1,4 @@
-/* Program 5
+/* Lab Program 5
  * An electricity board charges the following rates for the use of electricity: 
  * for the first 200 units 80 paise per unit: 
  * for the next 100 units 90 paise per unit: 
