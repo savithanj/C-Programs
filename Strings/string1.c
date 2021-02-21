@@ -15,7 +15,3 @@ int main()
 	
 	return 0;
 }
-i=0  name[0] = 'c'
-i=1 name [1] = 'm'
-i=2 name [2] = 'r'
-i=3
