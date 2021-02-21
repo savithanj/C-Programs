@@ -1,4 +1,5 @@
-// Program to check if the given matrix is an identity matrix
+// Program to check if the given matrix is an identity matrix or not
+// An identity matrix is a square matrix having 1s on the main diagonal, and 0s everywhere else.
 #include<stdio.h>
 #define TRUE 1
 #define FALSE 0
