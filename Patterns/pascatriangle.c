@@ -1,13 +1,15 @@
-// Program to print the pascal triangle of 10 rows
+// Program to print the pascal triangle of n rows
 #include<stdio.h>
-#define MAX 10
 
 int main()
 {
-	int m,x,binom,space;
+	int n,m,x,binom,space;
 
-	space = MAX*2;    
-	for(m=0; m <= MAX; m++)
+	printf("Enter the number of rows :");
+	scanf("%d", &n);
+
+	space = n*2;    
+	for(m=0; m <= n; m++)
 	{
 		// Print spaces
 		for (int i=0;i<space;i++)
