@@ -4,9 +4,12 @@
 int main()
 {
 	int i,j,n,temp,smallest;
-	int a[50];
+	
 	printf("Enter the size of the array:");
 	scanf("%d",&n);
+
+	int a[n];
+
 	printf("Enter %d elements :", n);
 	for(i=0;i<n;i++)
 	{
@@ -18,7 +21,7 @@ int main()
 		smallest = i;
 		for(j=i+1;j<n;j++)
 		{
-			if(a[j] < a[smallest])
+			if(a[j] > a[smallest])
 			{
 				smallest = j;
 			}
