@@ -21,13 +21,13 @@ int main()
 		smallest = i;
 		for(j=i+1;j<n;j++)
 		{
-			if(a[j] > a[smallest])
+			if(a[j] < a[smallest])
 			{
 				smallest = j;
 			}
 		}
 
-		// swap a[i] and s[smallest]
+		// swap a[i] and a[smallest]
 		temp = a[i];
 		a[i] = a[smallest];
 		a[smallest] = temp;
