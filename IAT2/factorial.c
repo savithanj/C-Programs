@@ -6,11 +6,6 @@ int main()
 	printf("Enter a positve number :");
 	scanf("%d", &n);
 
-	if( n < 0)
-	{
-		printf("Enter a possitve number\n");
-		return 1;
-	}
 	fact = 1;
 	for (int i=1;i <= n ;i++)
 	{
@@ -19,7 +14,3 @@ int main()
 	printf("Factorial of %d is %d\n", n, fact);
 	return 0;
 }
-
-
-
-       
