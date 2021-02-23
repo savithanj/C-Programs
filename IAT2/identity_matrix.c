@@ -48,10 +48,12 @@ int main()
 			if (i == j && a[i][j] != 1)
 			{
 				flag = FALSE;
+				break;
 			}
 			else if (i != j && a[i][j] != 0)
 			{
 				flag = FALSE;
+				break;
 			}
 		}
 	}
@@ -67,3 +69,5 @@ int main()
 	
 	return 0;
 }
+
+
