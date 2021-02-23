@@ -5,9 +5,10 @@
 int main()
 {
 	int n,i,flag;
+
 	printf("Enter a positive number :");
-	scanf("%d", &n);
-	flag = TRUE;
+	scanf("%d", &n);    
+	flag = TRUE;                   
 	for (i=2;i<=n/2;i++)           
 	{                        
 		if (n%i == 0)    

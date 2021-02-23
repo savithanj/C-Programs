@@ -1,4 +1,4 @@
-// Program to find the largest element of the array.
+// Program to find the smallest element of the array.
 
 #include<stdio.h>
 int main()
@@ -16,18 +16,18 @@ int main()
 	{
 		scanf("%d", &a[i]);
 	}
-    int largest=0;
+    int smallest = 0;
 
 	for (i=1;i<n;i++)           
 	{
-		if (a[i] > a[largest])
+		if (a[i] < a[smallest])
 		{
-			largest = i;
+			smallest = i;
 		}
 	}
 
-	//Display the largest and the smallest element
-	printf("The largest element of the array is %d\n",a[largest]);
+	//Display the smallest and the smallest element
+	printf("The smallest element of the array is %d\n",a[smallest]);
 
 	return 0;
 }

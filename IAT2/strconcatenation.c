@@ -7,7 +7,9 @@ int main()
 		gets (src);
 		printf("Enter a destination string :");
 		gets (des);
-		for(i=0;des[i]!='\0';i++);
+
+		for(i=0;des[i]!='\0';i++);    
+
 		for(j=0;src[j] != '\0';j++,i++)
 		{
 			des[i] = src[j];

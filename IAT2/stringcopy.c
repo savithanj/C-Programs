@@ -1,3 +1,5 @@
+// Program to implement strcyp
+
 #include<stdio.h>
 int main()
 {
@@ -6,8 +8,6 @@ int main()
 
 		printf("Enter a string :");
 		scanf("%[^\n]s",src);
-
-		//strcpy(des,src);
 
 		for(i=0;src[i] != '\0';i++)
 		{
