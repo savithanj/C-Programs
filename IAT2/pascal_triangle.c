@@ -16,18 +16,18 @@ int main()
 		{
 			printf(" ");
 		}
-		binom=1;
+		
 		for (x=0; x <= m; x++)
 		{
 			if (m == 0 || x == 0)
 			{
-				printf("%4d",binom);
+				binom = 1;
 			}
 			else
 			{
 				binom = binom * (m-x+1)/x;
-				printf("%4d", binom);
 			}
+			printf("%4d", binom);
 		} // inner for loop ends here
 		printf("\n");
 		space -= 2;

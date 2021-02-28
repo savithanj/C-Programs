@@ -26,7 +26,6 @@ int main()
 				smallest = j;
 			}
 		}
-
 		// swap a[i] and a[smallest]
 		temp = a[i];
 		a[i] = a[smallest];

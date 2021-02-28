@@ -28,6 +28,7 @@ int main()
 		a = b;
 		b = r;
 	} while (r != 0);
+
 	hcf = a;
 	lcm = (aorg * borg) / hcf;
 	printf("HCF(%d,%d) = %d\n",aorg,borg,hcf);
@@ -53,8 +54,8 @@ int main()
 	3. 26 and 91 hcf =13
 	4. 510 and 92 hcf = 2
 	5. 336 and 54 hcf = 6
+*/
 
-   a = bq + r;
-   */
 
-  
+
+	

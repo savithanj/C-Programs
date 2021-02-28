@@ -26,7 +26,7 @@ int main()
 		}
 	}
 
-	//Display the smallest and the smallest element
+	//Display the smallest element
 	printf("The smallest element of the array is %d\n",a[smallest]);
 
 	return 0;
