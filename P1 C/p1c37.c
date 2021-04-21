@@ -1,6 +1,6 @@
 // 37.	Write a C program to check whether a number is negative, positive or zero.
 #include<stdio.h>
-int main()
+int main()   // "Datatype of return value"    function_name   ( parameters)  
 {
 	int n;
 	printf("Enter a number :");
