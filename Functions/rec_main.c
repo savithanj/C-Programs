@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main()
 {
-	int n;
-	printf("Hello World\n");
-	scanf("%d",&n);
-	if (n != 999)
+	int num;
+	printf("Enter a number :");
+	scanf("%d", &num);
+	if (num != 100)
 	{
 		main();
 	}

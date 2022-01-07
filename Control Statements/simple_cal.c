@@ -1,63 +1,82 @@
-// Program to simulate simple calculator
+// simple calculator using if-else-if ladder
 #include<stdio.h>
-
 int main()
 {
   // Variable declaration
   int num1, num2, res;
   char op;
 
-  // Read two operands
+ // Read opreator first
+  printf("Enter the operator :");
+  scanf("%c", &op);
+
+ // Read two operands
   printf("Enter two integers : ");
   scanf("%d%d", &num1, &num2);
 
-  // Read opreator
-  printf("Enter the operator :");
-  scanf(" %c", &op);
-
   if (op == '+')
   {
-    res = num1 + num2;
+    	res = num1 + num2;
   }
   else if (op == '-')
   {
-    res = num1 - num2;
+    	res = num1 - num2;
   }
   else if (op == '*')
   {
-    res = num1 * num2;
+    	res = num1 * num2;
   }
   else if (op == '/')
   {
-    if (num2 == 0)
-    {
-      printf("Divide by zero Error. Denominator cannot be zero in division operation\n");
-      return 1;
-    }
-    else
-    {
-      res = num1 / num2;
-    }
-  }
-  else if (op == '%')
-  {
-    if (num2 == 0)
-    {
-      printf("Divide by zero Error. Denominator cannot be zero in modulus opration\n");
-      return 2;
-    }
-    else
-    {
-      res = num1 % num2;
-    }
+      	res = num1 / num2;
   }
   else
   {
       printf("Invalid operator\n");
-      return 3;
+      return 1;
   }
+  // print the output
+  printf("result = %d\n", res);
+  return 0;
+}
+
+// Program to simulate simple calculator using switch statement
+#include<stdio.h>
+int main()
+{
+	// Variable declaration
+  	int num1, num2, res;
+  	char op;
+
+ 	// Read opreator first
+  	printf("Enter the operator :");
+  	scanf("%c", &op);
+
+ 	// Read two operands
+  	printf("Enter two integers : ");
+  	scanf("%d%d", &num1, &num2);
+
+	switch (op)
+	{
+		case '+':
+					res = num1 + num2;
+					break;
+		case '-':
+					res = num1 - num2;
+					break;
+		case '*':
+					res = num1 * num2;
+					break;
+		case '/':
+					res = num1 / num2;
+					break;
+					
+		default:	printf("Invalid operator\n");
+					return 1;
+	}
 
   // print the output
   printf("result = %d\n", res);
   return 0;
 }
+

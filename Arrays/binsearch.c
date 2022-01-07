@@ -1,4 +1,4 @@
-// Program to implement binary search algorithm
+ // Program to implement binary search algorithm
 
 #include<stdio.h>
 int main()

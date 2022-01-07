@@ -1,14 +1,12 @@
 // Simulation of simple calculator
 // Example program for if else if ladder
 // Arithmetic operators -> +, -, *, /, and %
-
 #include<stdio.h>
 int main()
 {
-  int num1=0, num2=0, result=0;
-  
+  int num1, num2, result;
   char op;
-
+  
   printf("Enter two integers: ");
   scanf("%d%d", &num1, &num2);
 
@@ -18,32 +16,44 @@ int main()
   if (op == '+')
   {
     result = num1 + num2;
-    printf("%d %c %d = %d\n", num1, op, num2, result);
   }
   else if (op == '-')
   {
     result = num1 - num2;
-    printf("%d %c %d = %d\n", num1, op, num2, result);
   }
   else if (op == '*')
   {
     result = num1 * num2;
-    printf("%d %c %d = %d\n", num1, op, num2, result);
   }
   else if (op == '/')
   {
-    result = num1 / num2;
-    printf("%d %c %d = %d\n", num1, op, num2, result);
-  }
+	  if (num2 == 0)
+	  {
+		  printf("Divide by zero error\n");
+		  return 1;
+	  }
+	  else
+	  {
+		  result = num1 / num2;
+	  }
+  } // End of else if
   else if (op == '%')
   {
-    result = num1 % num2;
-    printf("%d %c %d = %d\n", num1, op, num2, result);
-  }
+    if (num2 == 0)
+	  {
+		  printf("Divide by zero error\n");
+		  return 1;
+	  }
+	  else
+	  {
+		  result = num1 % num2;
+	  }
+  } // End of else if
   else
   {
     printf("Invalid operator\n");
     return 1;
   }
+  printf("%d %c %d = %d\n", num1, op, num2, result);
   return 0;
-}
+}  // End of main function
