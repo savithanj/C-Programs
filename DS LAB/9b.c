@@ -43,14 +43,14 @@ POLYNOMIAL insert_end ( POLYNOMIAL head, int c, int px, int py, int pz )
 /*Function definition to read the polynomial.*/
 POLYNOMIAL input_polynomial ( POLYNOMIAL head )
 {
-	int i, c, px, py, pz;
-	printf ( "\nEnter 999 to end the polynomial!!!" );
-	for ( i = 1 ; ; i++ )
+	int i, c, px, py, pz,n;
+	printf ( "Enter the number of terms :" );
+	scanf("%d", &n);
+	
+	for ( i = 0;i<n; i++ )
 	{
-		printf ( "\nEnter the coefficient %d: ", i );
+		printf ( "\nEnter coefficient %d: ", i+1 );
 		scanf ( "%d", &c );
-		if ( c == 999 ) /*Breaks the loop when 999 is entered indicating end of input.*/
-		break;
 		printf ( "\nEnter the power of x: " );
 		scanf ( "%d", &px );
 		printf ( "\nEnter the power of y: " );
@@ -73,10 +73,11 @@ POLYNOMIAL temp;
 	temp = head->link;
 	while ( temp != head )
 	{
-		printf ( "%dx^%dy^%dz^%d + ", temp->coeff, temp->x, temp->y, temp->z );
+		if(temp != head->link && temp->coeff > 0)
+			putchar('+');
+		print ( " %d x^%d y^%d z^%d ", temp->coeff, temp->x, temp->y, temp->z );
 		temp = temp->link;
 	}
-	printf ( "999" );
 }
 
 /*Function definition to sum the two polynomials.*/
@@ -100,8 +101,7 @@ POLYNOMIAL sum_polynomial ( POLYNOMIAL head1, POLYNOMIAL head2, POLYNOMIAL head3
 			x2 = p2->x;
 			y2 = p2->y;
 			z2 = p2->z;
-			if ( ( x1 == x2 ) && ( y1 == y2 ) && ( z1 == z2 ) ) /*Check if the power of x, y
-			and z of both of the polynomials are equal or not.*/
+			if ( ( x1 == x2 ) && ( y1 == y2 ) && ( z1 == z2 ) ) /*Check if the power of x, y and z of both of the polynomials are equal or not.*/
 			{
 				head3 = insert_end ( head3, c1+c2, x1, y1, z1 ); /*Sum the coefficients
 				and inert into the final polynomial.*/
@@ -131,27 +131,27 @@ POLYNOMIAL sum_polynomial ( POLYNOMIAL head1, POLYNOMIAL head2, POLYNOMIAL head3
 
 int main()
 {
-POLYNOMIAL head1, head2, head3;
-/*Create a header node for polynomial1 whose link field points to the address of itself
-intially.*/
-head1 = create();
-head1->link = head1;
-/*Create a header node for polynomial2 whose link field points to the address of itself
-intially.*/
-head2 = create();
-head2->link = head2;
-/*Create a header node for sum of polynomial whose link field points to the address of
-itself intially.*/
-head3 = create();
-head3->link = head3;
-printf ( "\nEnter the first polynomial: " );
-head1 = input_polynomial ( head1 );
-display ( head1 );
-printf ( "\n\nEnter the second polynomial: " );
-head2 = input_polynomial ( head2 );
-display ( head2 );
-head3 = sum_polynomial ( head1, head2, head3 );
-printf ( "\n\nThe sum of two polynomials is: " );
-display ( head3 );
-return ( 0 );
+	POLYNOMIAL head1, head2, head3;
+	/*Create a header node for polynomial1 whose link field points to the address of itself
+	intially.*/
+	head1 = create();
+	head1->link = head1;
+	/*Create a header node for polynomial2 whose link field points to the address of itself
+	intially.*/
+	head2 = create();
+	head2->link = head2;
+	/*Create a header node for sum of polynomial whose link field points to the address of
+	itself intially.*/
+	head3 = create();
+	head3->link = head3;
+	printf ( "\nEnter the first polynomial: " );
+	head1 = input_polynomial ( head1 );
+	display ( head1 );
+	printf ( "\n\nEnter the second polynomial: " );
+	head2 = input_polynomial ( head2 );
+	display ( head2 );
+	head3 = sum_polynomial ( head1, head2, head3 );
+	printf ( "\n\nThe sum of two polynomials is: " );
+	display ( head3 );
+	return ( 0 );
 }

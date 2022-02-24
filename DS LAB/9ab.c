@@ -31,7 +31,7 @@ poly* create()
 	poly *temp = (poly*) malloc(sizeof(poly));
 	poly *t1 = temp;
 	for(i=0;i<n;i++,t1=t1->next)
-	t1->next=readpoly();
+		t1->next=readpoly();
 	t1->next=temp;
 	return temp;
 }

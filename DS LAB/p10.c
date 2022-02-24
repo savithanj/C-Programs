@@ -99,108 +99,106 @@ void search(struct BST *temp,int key)
 }
 void delete(struct BST *temp,int key)
 {
-struct BST *t,*parent,*succ;
-if(temp==NULL)
-printf("Empty tree!!");
-else
-{
-while(temp!=NULL)
-{
-if(temp->data==key)
-{
-if(temp->l==NULL && temp->r==NULL)
-{
-if(temp==t->l)
-t->l=NULL;
-else
-t->r=NULL;
-}
-else if(temp->l!=NULL && temp->r==NULL)
-{
-if(temp==t->l)
-t->l=temp->l;
-else
-t->r=temp->l;
-}
-else if(temp->l==NULL && temp->r!=NULL)
-{
-if(temp==t->l)
-t->l=temp->r;
-else
-t->r=temp->r;
-}
-else if(temp->l!=NULL && temp->r!=NULL)//with two child
-{
-parent=temp->r;
-succ=parent->l;
-while(succ->l!=NULL)
-{
-parent=succ;
-succ=succ->l;
-}
-temp->data=succ->data;
-parent->l=NULL;
-}
-return;
-} //key if
-else if(key>temp->data)
-{
-t=temp;
-temp=temp->r;
-}
-else if(key<temp->data)
-{
-t=temp;
-temp=temp->l;
-
-}
-}//while
-printf("key is not in BST");
-}
+	struct BST *t,*parent,*succ;
+	if(temp==NULL)
+	{
+		printf("Empty tree!!");
+		return ;
+	}
+	while(temp!=NULL)
+	{
+		if(temp->data==key)
+		{
+			if(temp->l==NULL && temp->r==NULL)
+			{
+				if(temp==t->l)
+					t->l=NULL;
+				else
+					t->r=NULL;
+			}
+			else if(temp->l!=NULL && temp->r==NULL)
+			{
+				if(temp==t->l)
+					t->l=temp->l;
+				else
+					t->r=temp->l;
+			}
+			else if(temp->l==NULL && temp->r!=NULL)
+			{
+				if(temp==t->l)
+					t->l=temp->r;
+				else
+					t->r=temp->r;
+			}
+			else if(temp->l!=NULL && temp->r!=NULL)//with two child
+			{
+				parent=temp->r;
+				succ=parent->l;
+				while(succ->l!=NULL)
+				{
+					parent=succ;
+					succ=succ->l;
+				}
+				temp->data=succ->data;
+				parent->l=NULL;
+			}
+			return;
+		} //key if
+		else if(key>temp->data)
+		{
+			t=temp;
+			temp=temp->r;
+		}
+		else if(key<temp->data)
+		{
+			t=temp;
+			temp=temp->l;
+		}
+	}//while
+	printf("key is not in BST");
 }
 
 int main()
 {
-int ca,key,d;
-printf("\n******************Binary Search Tree
-Operations*********************");
-do
-{
-ca=menu();
-
-switch(ca)
-{
-case 1:
-create();
-if(root==NULL)
-root=ptr;
-else
-insert(root);
-break;
-case 2:
-printf("Inorder:\t");
-inorder(root);
-break;
-case 3:
-printf("preorder:\t");
-preorder(root);
-break;
-case 4:
-printf("postorder:\t");
-postorder(root);
-break;
-case 5:
-printf("\nenter key to be search:\t");
-scanf("%d",&key);
-search(root,key);
-break;
-case 6:
-printf("\nenter key to be delete:\t");
-scanf("%d",&d);
-delete(root,d);
-break;
-case 7: break;
-default: break;
-}
-}while(ca!=7);
+	int ca,key,d;
+	printf("\n**************Binary Search Tree Operations**************\n");
+	do
+	{
+		ca=menu();
+		
+		switch(ca)
+		{
+			case 1:
+					create();
+					if(root==NULL)
+						root=ptr;
+					else
+						insert(root);
+					break;
+			case 2:
+					printf("Inorder:\t");
+					inorder(root);
+					break;
+			case 3:
+					printf("preorder:\t");
+					preorder(root);
+					break;
+			case 4:
+					printf("postorder:\t");
+					postorder(root);
+					break;
+			case 5:
+					printf("\nenter key to be search:\t");
+					scanf("%d",&key);
+					search(root,key);
+					break;
+			case 6:
+					printf("\nenter key to be delete:\t");
+					scanf("%d",&d);
+					delete(root,d);
+					break;
+			case 7: break;
+			default: break;
+		}
+	}while(ca!=7);
 }
