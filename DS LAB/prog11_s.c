@@ -4,7 +4,7 @@ int a[20][20],q[20],visited[20],reach[10],n,i,j,f=0,r=-1,count=0;
 void bfs(int v)
 {
 	for(i=1;i<=n;i++)
-		if(a[v][i] && !visited[i])
+		if(a[v][i] && !visited[i]) // if there is a connection and not visited
 		q[++r]=i;
 	if(f<=r)
 	{
