@@ -23,7 +23,7 @@
  	p = a;		// pointer p points to first element of a
  	for (i=0;i<n;i++)
  	{
- 		scanf("%f", p);
+ 		scanf("%f",p);
  		p++;	// pointer p points to the next element of a
  	}
  	
@@ -34,6 +34,8 @@
  	{
  		sum = sum + (*p);
  		p++;
+
+		
  	}
  	
  	// Compute mean

@@ -6,22 +6,17 @@
  
  
  int btod(int);		// Prototype of btod() function
- 
  int main()
  {
  	int binary, decimal;
- 	
  	// Accept input in binary format
  	printf("Enter binary input :");
  	scanf("%d", &binary);
- 	
  	if(binary < 0)
  	{
  		printf("Invalid Input. \n");
  		return 1;
  	}
- 	
- 	
  	// Invoke botd() to convert binary to decimal
  	decimal = btod(binary);
  	

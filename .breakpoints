@@ -1,5 +1,19 @@
 {
   "files": {
+    "21CPL17 Programs/prog10.c": [
+      {
+        "id": "cc2a6993-575d-4a25-b1f0-88de5d4d5cf7",
+        "line": 14,
+        "version": 357,
+        "index": 263
+      },
+      {
+        "id": "85c181eb-79c2-49d7-862a-1070cc9d636e",
+        "line": 45,
+        "version": 357,
+        "index": 836
+      }
+    ],
     "Functions/isprime.c": [
       {
         "id": "809a8b98-3886-464f-a8db-2e72ad8f8d63",
